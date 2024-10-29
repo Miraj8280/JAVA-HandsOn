@@ -8,7 +8,7 @@ public class Solution {
                         - TC: O(n^2)
                         - SC: O(1)
      ------------------------------------------------------------------*/
-    private static String findUniqueCharactersBruteForce(String str) {
+    private static String findUniqueCharacters1(String str) {
         int n = str.length();
         str = str.toLowerCase();
         String result = "";
@@ -38,7 +38,7 @@ public class Solution {
                         - TC: O(n)
                         - SC: O(n)
      ------------------------------------------------------------------*/
-    private static String findUniqueCharactersOptimal(String str) {
+    private static String findUniqueCharacters2(String str) {
         str = str.toLowerCase();
         Set<Character> set = new HashSet<>();
         String result = "";
@@ -59,8 +59,8 @@ public class Solution {
 
         while (t > 0) {
             String str = sc.nextLine();
-            // System.out.println(findUniqueCharactersBruteForce(str));
-            System.out.println(findUniqueCharactersOptimal(str));
+            // System.out.println(findUniqueCharacters1(str));
+            System.out.println(findUniqueCharacters2(str));
             t--;
         }
 
